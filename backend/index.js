@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = 8000;
 
-app.get("/", (_req, res) => {
+app.get("/api/health", (_req, res) => {
   res.json({
     status: "ok",
     service: "backend",
