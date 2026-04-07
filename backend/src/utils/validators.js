@@ -5,7 +5,7 @@ export function isValidTimestamp(value) {
   if (!ISO_UTC_REGEX.test(value)) return false;
 
   const d = new Date(value);
-  return !Number.isNaN(d.getTime()) && d.toISOString() === value;
+  return !Number.isNaN(d.getTime());
 }
 
 export function normalizeLocation(value) {
