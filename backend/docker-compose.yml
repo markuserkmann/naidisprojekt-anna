@@ -34,6 +34,10 @@ services:
     ports:
       - "7500:3306"
     restart: unless-stopped
+    networks:
+      default:
+        aliases:
+          - db
     volumes:
       - mysql_data:/var/lib/mysql
 
